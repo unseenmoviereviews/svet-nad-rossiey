@@ -317,12 +317,12 @@ footer{font:16px "Neucha",cursive;text-align:center;padding:24px 0 44px}
     Фильм был закончен, но в широкий прокат так и не вышел.
   </div>
   <div class="player">
-    <iframe src="https://www.youtube-nocookie.com/embed/qQ9d43z8Ymk?rel=0&amp;playsinline=1" title="Свет над Россией (1947)" loading="lazy"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    <iframe src="https://vkvideo.ru/video_ext.php?oid=-20286388&amp;id=456240549&amp;hd=2" title="Свет над Россией (1947)" loading="lazy"
+      allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock" allowfullscreen frameborder="0"></iframe>
   </div>
   <div class="alt">
     <span>Видео не загружается?</span>
-    <a class="btn btn-ghost" id="vk-link" href="https://vkvideo.ru/video-20286388_456240549" target="_blank" rel="noopener">Смотреть в VK Видео ↗</a>
+    <a class="btn btn-ghost" id="vk-link" href="https://www.youtube.com/watch?v=qQ9d43z8Ymk" target="_blank" rel="noopener">Смотреть на YouTube ↗</a>
   </div>
 
   <details class="ctx">
@@ -391,7 +391,7 @@ footer{font:16px "Neucha",cursive;text-align:center;padding:24px 0 44px}
 
 </main>
 
-<footer class="wrap">Практикум по истории СССР · фильм «Свет над Россией» (1947) размещён на официальном канале «Мосфильма»</footer>
+<footer class="wrap">Практикум по истории СССР · фильм «Свет над Россией» («Мосфильм», 1947)</footer>
 
 <div class="bar" id="bar" hidden>
   <div class="in">
@@ -525,7 +525,7 @@ var TOPICS = [
     if(reason==="blur"){ var a=document.activeElement; if(inFs()||dlg||(a&&a.tagName==="IFRAME")) return; } // клик по плееру — не уход
     away=true; last=now;
     var stamp=new Date().toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit",second:"2-digit"});
-    st.exits++; st.log.push(stamp+(now-vkAt<3000?" (VK Видео)":"")); save(); updateBar();
+    st.exits++; st.log.push(stamp+(now-vkAt<3000?" (YouTube)":"")); save(); updateBar();
   }
   function back(){if(!document.hidden) away=false}
   document.addEventListener("visibilitychange",function(){document.hidden?exit("hidden"):back()});
