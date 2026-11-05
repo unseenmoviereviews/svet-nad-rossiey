@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffd21f">
+<meta name="format-detection" content="telephone=no">
+<title>«Свет над Россией» (1947) — практикум: фильм, вопросы, эссе</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Rubik+Mono+One&family=Neucha&display=swap" rel="stylesheet">
+<style>
+/* ДАДА × «ясная линия» франко-бельгийского комикса */
+:root{
+  --paper:#f3e9d2; --paper2:#fbf5e6; --ink:#111; --red:#e2231a; --blue:#1d5fb4; --sky:#7fc4ea;
+  --yellow:#ffd21f; --green:#2f9e57; --pink:#f48fb1; --muted:#4a463f; --line:3px solid var(--ink);
+  --sh:6px 6px 0 var(--ink); --r:4px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font:17px/1.6 "PT Serif",Georgia,serif;overflow-x:hidden;padding:0 0 env(safe-area-inset-bottom);
+  background-color:var(--paper);
+  background-image:radial-gradient(rgba(17,17,17,.09) 1px,transparent 1.4px);background-size:7px 7px}
+/* запрет выделения и копирования текста страницы (поля ответа работают как обычно) */
+body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+input,textarea{-webkit-user-select:text;user-select:text;-webkit-touch-callout:default}
+img{-webkit-user-drag:none}
+@media print{body{display:none}}
+body.testing{padding-bottom:calc(78px + env(safe-area-inset-bottom))}
+img{max-width:100%;display:block}
+a{color:var(--blue)}
+.wrap{max-width:880px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left)) 0 max(16px,env(safe-area-inset-right))}
+h1,h2,h3{line-height:1.15;margin:0}
+.mono{font-family:"Rubik Mono One","Arial Black",sans-serif;font-weight:400;text-transform:uppercase}
+.hand{font-family:"Neucha","Comic Sans MS",cursive}
+
+/* ---------- шапка-коллаж ---------- */
+.hero{position:relative;padding:calc(26px + env(safe-area-inset-top)) 0 30px;overflow:hidden;border-bottom:var(--line);
+  background:
+    repeating-conic-gradient(from 0deg at 82% 18%,var(--yellow) 0 9deg,#ffe36b 9deg 18deg);}
+.hero:before{content:"";position:absolute;left:-10%;bottom:-40px;width:70%;height:120px;background:var(--red);transform:rotate(-6deg);border:var(--line)}
+.hero .wrap{position:relative}
+.stamp{display:inline-block;border:var(--line);background:var(--paper2);padding:4px 10px;font:13px/1.2 "Rubik Mono One",sans-serif;text-transform:uppercase;transform:rotate(-3deg);box-shadow:4px 4px 0 var(--ink)}
+.ransom{display:flex;flex-wrap:wrap;gap:6px 4px;margin:18px 0 8px;align-items:flex-end}
+.ransom span{display:inline-block;border:var(--line);padding:2px 8px 0;box-shadow:4px 4px 0 var(--ink);line-height:1.05;font-size:clamp(30px,9vw,62px)}
+.ransom .w{width:clamp(8px,2vw,18px);border:0;box-shadow:none;padding:0}
+.r1{background:var(--red);color:#fff;font-family:"Rubik Mono One",sans-serif;transform:rotate(-4deg)}
+.r2{background:var(--paper2);font-family:"PT Serif",serif;font-weight:700;font-style:italic;transform:rotate(3deg)}
+.r3{background:var(--blue);color:var(--yellow);font-family:"Neucha",cursive;transform:rotate(-2deg) translateY(4px)}
+.r4{background:#111;color:var(--paper2);font-family:"Rubik Mono One",sans-serif;transform:rotate(5deg)}
+.r5{background:var(--sky);font-family:"PT Serif",serif;transform:rotate(-6deg)}
+.r6{background:var(--paper2);color:var(--red);font-family:"Rubik Mono One",sans-serif;transform:rotate(2deg) translateY(-3px)}
+.r7{background:var(--green);color:#fff;font-family:"Neucha",cursive;transform:rotate(-3deg)}
+.r8{background:var(--yellow);font-family:"PT Serif",serif;font-weight:700;transform:rotate(4deg)}
+.bubble{position:relative;display:inline-block;background:#fff;border:var(--line);border-radius:24px;padding:12px 18px;max-width:560px;
+  font:19px/1.4 "Neucha",cursive;margin:14px 0 6px;box-shadow:var(--sh)}
+.bubble:after{content:"";position:absolute;left:38px;bottom:-22px;width:26px;height:22px;background:#fff;border-right:var(--line);border-bottom:var(--line);
+  transform:skewX(-35deg);border-bottom-right-radius:4px}
+.lamp{position:absolute;right:6px;top:-6px;width:84px;height:84px;border:var(--line);border-radius:50%;background:radial-gradient(circle at 40% 38%,#fff 0 14%,var(--yellow) 30%,#ffb300 70%);
+  box-shadow:0 0 0 10px rgba(255,255,255,.55),var(--sh);animation:flick 5s infinite}
+.lamp:after{content:"";position:absolute;left:50%;bottom:-24px;width:30px;height:22px;margin-left:-15px;background:repeating-linear-gradient(#777 0 5px,#bbb 5px 9px);border:var(--line);border-radius:0 0 8px 8px}
+@keyframes flick{0%,46%,50%,100%{filter:none}47%{filter:brightness(.6)}49%{filter:brightness(.8)}}
+@media (prefers-reduced-motion:reduce){.lamp{animation:none}html{scroll-behavior:auto}}
+@media (max-width:560px){.lamp{width:58px;height:58px;right:0;top:-2px}.ransom{padding-right:46px}}
+.steps{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 0;padding:0;list-style:none;position:relative}
+.steps a{display:flex;align-items:center;gap:8px;min-height:44px;text-decoration:none;color:var(--ink);background:var(--paper2);border:var(--line);padding:6px 12px;
+  font:15px/1.2 "Neucha",cursive;box-shadow:4px 4px 0 var(--ink)}
+.steps li:nth-child(odd) a{transform:rotate(-1.5deg)} .steps li:nth-child(even) a{transform:rotate(1.5deg)}
+.steps b{font:13px "Rubik Mono One",sans-serif;background:var(--red);color:#fff;border:2px solid var(--ink);width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;border-radius:50%}
+
+section{padding:36px 0 6px}
+.sec-h{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:18px}
+.sec-h .n{font:28px/1 "Rubik Mono One",sans-serif;background:var(--ink);color:var(--yellow);width:52px;height:52px;display:flex;align-items:center;justify-content:center;transform:rotate(-6deg);box-shadow:4px 4px 0 var(--red)}
+.sec-h h2{font:clamp(19px,4.6vw,28px)/1.15 "Rubik Mono One",sans-serif;text-transform:uppercase;background:var(--paper2);border:var(--line);padding:6px 12px;box-shadow:var(--sh)}
+.sec-h .t{font:14px "Neucha",cursive;background:var(--yellow);border:2px solid var(--ink);padding:2px 10px;transform:rotate(3deg)}
+
+/* ---------- лекция: страница альбома ---------- */
+.lecture{background:var(--paper2);border:var(--line);box-shadow:var(--sh);padding:22px 20px 26px;font-size:18px;line-height:1.65}
+.lecture h3{display:inline-block;font:17px/1.25 "Rubik Mono One",sans-serif;text-transform:uppercase;margin:28px 0 12px;padding:6px 10px;background:var(--yellow);border:var(--line);transform:rotate(-1deg)}
+.lecture h3:nth-of-type(3n+2){background:var(--sky);transform:rotate(1deg)}
+.lecture h3:nth-of-type(3n){background:var(--red);color:#fff}
+.lecture h3:first-child{margin-top:0}
+.lecture p{margin:0 0 12px}
+.lecture .lead{font:21px/1.45 "Neucha",cursive;border-left:8px solid var(--red);padding-left:12px}
+.lecture blockquote{position:relative;margin:16px 0;padding:14px 16px;background:#fff;border:var(--line);border-radius:22px;font:20px/1.4 "Neucha",cursive;box-shadow:4px 4px 0 var(--blue)}
+.lecture blockquote cite{display:block;font:13px "PT Serif",serif;font-style:italic;color:var(--muted);margin-top:6px}
+.lecture ul{margin:0 0 12px;padding-left:22px}
+.lecture li{margin:0 0 6px}
+.lecture .key{background:var(--blue);color:#fff;border:var(--line);padding:14px 16px 10px;margin:18px 0;box-shadow:var(--sh);transform:rotate(-.6deg)}
+.lecture .key b{color:var(--yellow)}
+figure{margin:18px 0 22px;background:#fff;border:var(--line);padding:8px;box-shadow:var(--sh)}
+figure img{width:100%;height:auto;background:#ddd;cursor:zoom-in;border:2px solid var(--ink)}
+figcaption{font:15px/1.35 "Neucha",cursive;color:var(--ink);margin-top:8px;background:var(--yellow);border:2px solid var(--ink);padding:4px 8px}
+.lecture > figure:nth-of-type(odd){transform:rotate(-.8deg)} .lecture > figure:nth-of-type(even){transform:rotate(.8deg)}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.pair figure{margin:14px 0}
+.pair figure:first-child{transform:rotate(-1.2deg)} .pair figure:last-child{transform:rotate(1.2deg)}
+@media (max-width:560px){.pair{grid-template-columns:1fr}}
+.src{font-size:14px;color:var(--muted);border-top:3px dashed var(--ink);padding-top:12px;margin-top:22px}
+.bridge{background:var(--red);color:#fff;border:var(--line);box-shadow:var(--sh);padding:16px;margin-top:22px;font-size:16.5px}
+.bridge b{font:15px/1.3 "Rubik Mono One",sans-serif;text-transform:uppercase;color:var(--yellow)}
+.bridge ul{margin:8px 0 0;padding-left:20px}
+
+/* ---------- лайтбокс ---------- */
+.lb{position:fixed;inset:0;z-index:50;background:rgba(17,17,17,.94);display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:calc(14px + env(safe-area-inset-top)) 12px calc(14px + env(safe-area-inset-bottom))}
+.lb[hidden]{display:none}
+.lb img{max-height:80vh;width:auto;max-width:100%;object-fit:contain;border:4px solid #fff}
+.lb p{color:#fff;font:16px "Neucha",cursive;text-align:center;max-width:700px;margin:10px 0 0}
+.lb button{position:absolute;top:calc(10px + env(safe-area-inset-top));right:12px;width:46px;height:46px;border-radius:50%;border:3px solid #fff;background:var(--red);color:#fff;font-size:26px}
+
+/* ---------- фильм: кадр комикса ---------- */
+.film-meta{background:var(--paper2);border:var(--line);box-shadow:var(--sh);padding:14px 16px;font-size:15.5px;margin-bottom:22px}
+.film-meta b{background:var(--yellow);padding:0 3px}
+.player{position:relative;width:100%;aspect-ratio:16/9;background:#000;border:5px solid var(--ink);box-shadow:10px 10px 0 var(--blue)}
+@supports not (aspect-ratio:16/9){.player{height:0;padding-top:56.25%}}
+.player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.alt{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:20px;font:17px "Neucha",cursive}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 20px;border:var(--line);border-radius:0;
+  font:15px/1.1 "Rubik Mono One",sans-serif;text-transform:uppercase;text-decoration:none;cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation;
+  box-shadow:4px 4px 0 var(--ink);transition:transform .08s,box-shadow .08s}
+.btn:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
+.btn-lamp{background:var(--red);color:#fff}
+.btn-ghost{background:var(--paper2);color:var(--ink)}
+.btn[disabled]{opacity:.45;cursor:default;box-shadow:none}
+details.ctx{background:var(--sky);border:var(--line);box-shadow:var(--sh);margin-top:24px}
+details.ctx summary{cursor:pointer;padding:14px 16px;font:15px/1.3 "Rubik Mono One",sans-serif;text-transform:uppercase;list-style:none;min-height:50px}
+details.ctx summary::-webkit-details-marker{display:none}
+details.ctx summary::before{content:"▶ ";color:var(--red)}
+details.ctx[open] summary::before{content:"▼ "}
+details.ctx .in{padding:0 16px 14px;font-size:16px;background:var(--paper2);border-top:var(--line);padding-top:12px}
+details.ctx .in ul{padding-left:20px;margin:0}
+details.ctx .in li{margin-bottom:8px}
+
+/* ---------- регистрация ---------- */
+.card{background:var(--paper2);border:var(--line);box-shadow:var(--sh);padding:18px 16px}
+label.f{display:block;font:17px "Neucha",cursive;margin:0 0 6px}
+input.inp,textarea{width:100%;font:16px/25.6px "PT Serif",Georgia,serif;color:var(--ink);background:#fff;border:var(--line);border-radius:0;padding:12px 14px;
+  -webkit-appearance:none;appearance:none;background-image:repeating-linear-gradient(transparent 0 24.6px,#d9e8f6 24.6px 25.6px);background-position:0 12px;background-attachment:local}
+input.inp{min-height:52px;margin-bottom:14px;background-image:none}
+input.inp:focus,textarea:focus{outline:none;box-shadow:4px 4px 0 var(--red)}
+.who{display:flex;flex-wrap:wrap;align-items:center;gap:10px;justify-content:space-between}
+.who .name{font:20px "Neucha",cursive;background:var(--yellow);padding:0 6px}
+.note{font-size:14.5px;color:var(--muted);margin:12px 0 0}
+.err{color:var(--red);font-weight:700;font-size:15px;min-height:20px;margin:0 0 8px}
+
+/* ---------- вопросы: кадры комикса ---------- */
+.locked{opacity:.5;pointer-events:none;filter:grayscale(.6)}
+.q{position:relative;background:var(--paper2);border:var(--line);box-shadow:var(--sh);padding:18px 16px;margin-bottom:22px;scroll-margin-top:16px}
+#qlist .q:nth-child(4n+2){box-shadow:6px 6px 0 var(--blue)} #qlist .q:nth-child(4n+3){box-shadow:6px 6px 0 var(--red)}
+.q.missing{background:#ffe1dc;box-shadow:6px 6px 0 var(--red)}
+.q-top{display:flex;gap:12px;align-items:center;margin:-30px 0 12px}
+.q-num{flex:none;width:44px;height:44px;border:var(--line);border-radius:50%;background:var(--red);color:#fff;font:18px "Rubik Mono One",sans-serif;display:flex;align-items:center;justify-content:center;transform:rotate(-8deg)}
+.q-title{font:15.5px/1.2 "Rubik Mono One",sans-serif;text-transform:uppercase;background:var(--yellow);border:var(--line);padding:6px 10px;transform:rotate(-1deg)}
+#qlist .q:nth-child(even) .q-title{background:var(--sky);transform:rotate(1deg)}
+.q-text{margin:0 0 12px}
+.hint{font:17px/1.4 "Neucha",cursive;background:#fff;border:2px solid var(--ink);border-radius:18px;padding:10px 14px;margin:0 0 14px}
+.hint b{color:var(--red)}
+textarea{min-height:180px;resize:vertical;display:block}
+.cnt{display:flex;justify-content:space-between;gap:10px;font:15px "Neucha",cursive;margin-top:6px}
+.cnt .good{color:var(--green);font-weight:700}
+.essay textarea{min-height:360px}
+.topics{display:grid;gap:12px;margin:0 0 16px}
+.topic{display:flex;gap:12px;align-items:flex-start;background:#fff;border:var(--line);padding:12px 14px;cursor:pointer;min-height:50px}
+.topic input{width:24px;height:24px;flex:none;margin:2px 0 0;accent-color:var(--red)}
+.topic:has(input:checked){background:var(--yellow);box-shadow:4px 4px 0 var(--ink)}
+.crit{margin:0 0 14px;padding-left:20px;font-size:16px}
+.sendbox{text-align:center;padding:14px 0 30px}
+.sendbox .btn{width:100%;max-width:440px;min-height:60px;font-size:16px}
+.sendmsg{min-height:22px;font:17px "Neucha",cursive;margin-top:12px}
+.result{border:var(--line);box-shadow:var(--sh);padding:16px;margin:10px 0 30px;font-size:16.5px}
+.result.ok{background:#c9f0d5}
+.result.warn{background:var(--yellow)}
+
+/* ---------- нижняя плашка ---------- */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--ink);color:var(--paper2);border-top:4px solid var(--red);
+  padding:10px max(14px,env(safe-area-inset-left)) calc(10px + env(safe-area-inset-bottom)) max(14px,env(safe-area-inset-right))}
+.bar[hidden]{display:none}
+.bar .in{max-width:880px;margin:0 auto;display:flex;gap:12px;align-items:center;justify-content:space-between;font:16px "Neucha",cursive}
+.bar b{color:var(--yellow)}
+.bar .btn{min-height:44px;padding:0 12px;font-size:12px;box-shadow:3px 3px 0 var(--yellow);border-color:var(--paper2)}
+footer{font:16px "Neucha",cursive;text-align:center;padding:24px 0 44px}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="lamp" aria-hidden="true"></div>
+    <span class="stamp">Практикум · кино как источник</span>
+    <h1 class="ransom" aria-label="Свет над Россией">
+      <span class="r1">СВ</span><span class="r2">е</span><span class="r3">т</span><span class="w"></span>
+      <span class="r4">НАД</span><span class="w"></span>
+      <span class="r5">Р</span><span class="r6">О</span><span class="r7">сс</span><span class="r8">ией</span>
+    </h1>
+    <div class="bubble">Мосфильм, 1947. Ленин, ГОЭЛРО и лампочка Ильича — фильм, который так и не вышел в прокат. Сначала введение о соцреализме, потом фильм, вопросы и эссе!</div>
+    <ul class="steps">
+      <li><a href="#intro"><b>1</b> Введение · 10 мин</a></li>
+      <li><a href="#film"><b>2</b> Фильм · 68 мин</a></li>
+      <li><a href="#questions"><b>3</b> 8 вопросов</a></li>
+      <li><a href="#essay"><b>4</b> Эссе</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="wrap">
+
+<!-- ================= 1. ВВЕДЕНИЕ ================= -->
+<section id="intro">
+  <div class="sec-h"><span class="n">1</span><h2>Что такое социалистический реализм</h2><span class="t">≈ 10 минут</span></div>
+
+  <article class="lecture">
+    <p class="lead">«Свет над Россией» снят в 1947 году — в самый разгар позднего сталинского искусства. Чтобы понять, <i>почему</i> фильм выглядит именно так, нужно знать правила, по которым тогда создавались книги, картины и фильмы. Эти правила назывались социалистическим реализмом.</p>
+
+    <h3>Один кадр, ставший каноном</h3>
+    <p>В финале музыкальной комедии Григория Александрова «Цирк» (1936) счастливые герои шагают в колонне первомайской демонстрации. Через год почти та же группа появляется в панно Александра Дейнеки «Стахановцы», а позже — на огромном коллективном полотне «Знатные люди Страны Советов». Образ переходит из кино в живопись и обратно, почти не меняясь. Это и есть главный признак большого стиля: у разных авторов и в разных искусствах получается одна и та же картина мира. Философ Борис Гройс назвал её «стилем Сталин».</p>
+    <figure>
+      <img loading="lazy" src="https://cdn-s-static.arzamas.academy/uploads/ckeditor/pictures/7184/content_circus.jpg" alt="Кадр из фильма «Цирк»: герои в колонне демонстрации">
+      <figcaption>Кадр из фильма Г. Александрова «Цирк». 1936. «Мосфильм»</figcaption>
+    </figure>
+
+    <h3>Откуда взялся термин</h3>
+    <p>В 1920-е годы в советском искусстве спорили десятки группировок — от авангардистов до реалистов-«передвижников». Постановлением ЦК ВКП(б) от 23 апреля 1932 г. «О перестройке литературно-художественных организаций» все они были распущены; вместо них создавались единые творческие союзы. В 1934 г. на Первом всесоюзном съезде советских писателей, который открывал Максим Горький, соцреализм провозгласили основным методом советской литературы. Устав Союза писателей требовал от художника:</p>
+    <blockquote>«правдивого, исторически-конкретного изображения действительности в её революционном развитии»<cite>Устав Союза советских писателей, 1934</cite></blockquote>
+    <p>Формула была расплывчатой, но главное в ней — слова «в революционном развитии». Изображать надо не то, что есть, а то, что <i>должно быть</i>: жизнь, увиденная из светлого будущего. Термин придумали для литературы, но очень быстро его распространили на живопись, театр, музыку, архитектуру и кино.</p>
+
+    <div class="key">
+      <b>Три опоры соцреализма</b> — так их формулировали в учебниках:
+      <ul>
+        <li><b>идейность</b> — произведение служит идее коммунизма;</li>
+        <li><b>партийность</b> — автор смотрит на мир глазами партии;</li>
+        <li><b>народность</b> — искусство понятно массовому зрителю и «служит народу».</li>
+      </ul>
+    </div>
+
+    <h3>Государство — главный заказчик</h3>
+    <p>Искусство считалось частью агитации и пропаганды. Художник получал заказ, выставком решал, попадёт ли работа на выставку, государство покупало её и награждало автора. Отдельной «инструкции» по соцреализму не существовало, зато была критика: статьи в газетах быстро объясняли, что теперь правильно, а что — нет. Сама система госзаказа сложилась ещё в 1920-е: её главными исполнителями стали художники АХРР (Ассоциации художников революционной России), и после 1932 г. их понятная власти и массовому зрителю манера стала основой официального стиля.</p>
+
+    <h3>Иерархия жанров</h3>
+    <p>На вершине стояла <b>тематическая картина</b> — большой холст на важный сюжет, где ясно, кто герой, а кто враг, и где не остаётся двусмысленности. Классический пример — «Допрос коммунистов» Бориса Иогансона: свет падает на стойких пленных, враги остаются в тени.</p>
+    <div class="pair">
+      <figure>
+        <img loading="lazy" src="https://cdn-s-static.arzamas.academy/storage/picture/2958/gallery_picture-4652bc62-3b42-4410-8990-ad8e2e6428ba.jpg" alt="Б. Иогансон. Допрос коммунистов">
+        <figcaption>Борис Иогансон. «Допрос коммунистов». 1933. ГТГ</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="https://cdn-s-static.arzamas.academy/storage/picture/2959/gallery_picture-e110cb4d-5bec-49fb-b0ec-5f39b26bbd82.jpg" alt="Б. Иогансон. На старом уральском заводе">
+        <figcaption>Борис Иогансон. «На старом уральском заводе». 1937. ГТГ</figcaption>
+      </figure>
+    </div>
+    <p>Другой любимый жанр — <b>апофеоз</b>: праздник, изобилие, всеобщая радость. «Колхозный праздник» Сергея Герасимова написан в 1937 г., всего через несколько лет после голода 1932–1933 гг., — и показывает столы, ломящиеся от еды. Искусство соцреализма вообще любит изобилие: много людей, много хлеба, много света.</p>
+    <figure>
+      <img loading="lazy" src="https://cdn-s-static.arzamas.academy/storage/picture/2960/gallery_picture-c0d1f4a7-a81c-4a94-a295-0bc66de2460e.jpg" alt="С. Герасимов. Колхозный праздник">
+      <figcaption>Сергей Герасимов. «Колхозный праздник». 1937. ГТГ</figcaption>
+    </figure>
+    <p><b>Пейзаж</b> должен быть огромным — «широка страна моя родная». Ценились индустриальные пейзажи: стройки-гиганты, Магнитка, Днепрогэс. А в картине Фёдора Шурпина «Утро нашей родины» сам Сталин стоит на фоне бескрайних полей и линий электропередачи — вождь и преобразованная им земля сливаются в одно целое.</p>
+    <figure>
+      <img loading="lazy" src="https://cdn-s-static.arzamas.academy/uploads/ckeditor/pictures/7126/content_morning.jpg" alt="Ф. Шурпин. Утро нашей родины">
+      <figcaption>Фёдор Шурпин. «Утро нашей родины». 1946–1948. ГТГ. Обратите внимание на опоры ЛЭП — это та же тема электрификации, что и в нашем фильме</figcaption>
+    </figure>
+    <p><b>Портрет</b> прославлял выдающихся людей — учёных, врачей, артистов, героев труда. Главным портретистом 1930-х стал Михаил Нестеров, до революции писавший религиозные сюжеты.</p>
+    <div class="pair">
+      <figure>
+        <img loading="lazy" src="https://cdn-s-static.arzamas.academy/storage/picture/2983/gallery_picture-07733ca9-998e-4db7-8f11-5fc2b3b54b00.jpg" alt="М. Нестеров. Портрет хирурга Сергея Юдина">
+        <figcaption>Михаил Нестеров. «Портрет хирурга Сергея Юдина». 1935. ГТГ</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="https://cdn-s-static.arzamas.academy/storage/picture/2968/gallery_picture-16f96cfe-d5fb-47d3-8bf7-7b1e34b4bed2.jpg" alt="Ю. Пименов. Новая Москва">
+        <figcaption>Юрий Пименов. «Новая Москва». 1937. ГТГ — лирический, «дождливый» соцреализм</figcaption>
+      </figure>
+    </div>
+
+    <h3>Борьба с формализмом</h3>
+    <p>Мастерство художника должно быть видно, но не должно «выпячиваться». Всё, что казалось экспериментом ради эксперимента, объявлялось <b>формализмом</b>. В январе 1936 г. «Правда» опубликовала редакционную статью «Сумбур вместо музыки» против оперы Дмитрия Шостаковича — с неё началась открытая кампания против формализма во всех искусствах. После войны, в 1946–1948 гг., последовали новые постановления ЦК — о журналах «Звезда» и «Ленинград», о кинофильме «Большая жизнь», об опере «Великая дружба». Это прямой контекст нашего фильма.</p>
+
+    <h3>Остановленное время и вождь-герой</h3>
+    <p>К концу 1930-х соцреализм достигает своей высшей точки. Настоящее изображается как уже сбывшееся будущее: история как будто достигла цели и остановилась. Обязательным героем становится Сталин, а его появление в картине подаётся почти как чудо. Самый известный пример — полотно Александра Герасимова, которое в народе прозвали «Два вождя после дождя».</p>
+    <figure>
+      <img loading="lazy" src="https://cdn-s-static.arzamas.academy/storage/picture/2967/gallery_picture-630d0442-f113-44a4-ad54-aeeec2df7d34.jpg" alt="А. Герасимов. Иосиф Сталин и Климент Ворошилов в Кремле">
+      <figcaption>Александр Герасимов. «И. В. Сталин и К. Е. Ворошилов в Кремле». 1938. ГТГ</figcaption>
+    </figure>
+    <p>Важное следствие: прошлое переписывается под настоящее. Если Сталин — главный герой эпохи, он должен присутствовать и в тех событиях, где на деле его роль была скромной. В кино 1930–1940-х годов это видно особенно ясно: в фильмах о революции и Гражданской войне Сталин всё чаще стоит рядом с Лениным как равный соратник и мудрый советчик.</p>
+
+    <h3>После войны и после Сталина</h3>
+    <p>Война принесла в искусство больше «человеческого»: частную жизнь, семью, тихие сюжеты. «Письмо с фронта» Александра Лактионова или «Опять двойка» Фёдора Решетникова — это соцреализм камерный, домашний, но по-прежнему назидательный. После смерти Сталина стиль пытается стать «соцреализмом с человеческим лицом», а в 1960-е большой стиль уходит, уступая место новым направлениям и неофициальному искусству.</p>
+    <div class="pair">
+      <figure>
+        <img loading="lazy" src="https://cdn-s-static.arzamas.academy/storage/picture/2969/gallery_picture-4c3b6c88-e340-4547-989d-53bf091e471f.jpg" alt="А. Лактионов. Письмо с фронта">
+        <figcaption>Александр Лактионов. «Письмо с фронта». 1947. ГТГ</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="https://cdn-s-static.arzamas.academy/storage/picture/2970/gallery_picture-f8dea747-782a-4a0a-9aad-a0eb8121cf72.jpg" alt="Ф. Решетников. Опять двойка">
+        <figcaption>Фёдор Решетников. «Опять двойка». 1952. ГТГ</figcaption>
+      </figure>
+    </div>
+
+    <div class="bridge">
+      <b>Смотрите фильм как соцреалистическое произведение.</b> Во время просмотра обращайте внимание:
+      <ul>
+        <li>где 1920 год показан «в революционном развитии» — так, каким он <i>должен был</i> быть, а не каким был;</li>
+        <li>как в фильм вписан Сталин и как распределены роли между вождями;</li>
+        <li>где тьма и свет, герои и враги разведены так же ясно, как на «Допросе коммунистов»;</li>
+        <li>чего в кадре нет совсем: голода, разрухи, сомнений.</li>
+      </ul>
+    </div>
+
+    <p class="src">Введение подготовлено по материалу Галины Ельшевской «Соцреализм» на сайте «Арзамас»: <a href="https://arzamas.academy/materials/1204" target="_blank" rel="noopener">arzamas.academy/materials/1204</a>. Иллюстрации — оттуда же (собрание Государственной Третьяковской галереи; фото РИА «Новости», ТАСС). Полный текст с большим числом картин — по ссылке.</p>
+  </article>
+</section>
+
+<!-- ================= 2. ФИЛЬМ ================= -->
+<section id="film">
+  <div class="sec-h"><span class="n">2</span><h2>Фильм</h2><span class="t">68 минут</span></div>
+  <div class="film-meta">
+    <b>«Свет над Россией»</b>, «Мосфильм», 1947, ч/б. Режиссёр <b>Сергей Юткевич</b>, сценарий <b>Николая Погодина</b> по его пьесе «Кремлёвские куранты», оператор Марк Магидсон, музыка <b>Арама Хачатуряна</b>.<br>
+    В ролях: Николай Колесников (Ленин), Михаил Геловани (Сталин), Николай Охлопков (инженер Забелин), Николай Крючков (матрос Рыбаков), Кира Головко (Маша Забелина), Вениамин Зускин (часовщик), Сергей Ценин (Г. Уэллс), Борис Ливанов (Маяковский).<br>
+    Фильм был закончен, но в широкий прокат так и не вышел.
+  </div>
+  <div class="player">
+    <iframe src="https://www.youtube-nocookie.com/embed/qQ9d43z8Ymk?rel=0&amp;playsinline=1" title="Свет над Россией (1947)" loading="lazy"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  </div>
+  <div class="alt">
+    <span>Видео не загружается?</span>
+    <a class="btn btn-ghost" id="vk-link" href="https://vkvideo.ru/video-20286388_456240549" target="_blank" rel="noopener">Смотреть в VK Видео ↗</a>
+  </div>
+
+  <details class="ctx">
+    <summary>Историческая справка: ГОЭЛРО, Уэллс, «лампочка Ильича»</summary>
+    <div class="in">
+      <ul>
+        <li><b>ГОЭЛРО</b> — Государственная комиссия по электрификации России во главе с Г. М. Кржижановским (создана в 1920 г.). Её план предусматривал строительство 30 районных электростанций за 10–15 лет. План одобрил VIII Всероссийский съезд Советов в декабре 1920 г.; там Ленин произнёс формулу «Коммунизм есть Советская власть плюс электрификация всей страны».</li>
+        <li><b>Кашино.</b> 14 ноября 1920 г. Ленин побывал на открытии сельской электростанции в деревне Кашино Волоколамского уезда, построенной самими крестьянами. Отсюда — выражение «лампочка Ильича».</li>
+        <li><b>Герберт Уэллс</b> посетил Советскую Россию осенью 1920 г., встречался с Лениным и описал поездку в книге «Россия во мгле», назвав Ленина «кремлёвским мечтателем». В 1934 г. Уэллс снова приехал в СССР и беседовал со Сталиным.</li>
+        <li><b>Кремлёвские куранты</b>, повреждённые во время боёв в Москве в 1917 г., были отремонтированы в 1918 г.; с тех пор они исполняли «Интернационал». Пьеса Погодина «Кремлёвские куранты» написана накануне войны.</li>
+        <li><b>1946–1947:</b> послевоенный голод; ждановские постановления ЦК об искусстве, в том числе о кинофильме «Большая жизнь» (4 сентября 1946 г.); ряд фильмов в эти годы был запрещён или отправлен на переделку.</li>
+        <li>Исполнитель роли часовщика <b>Вениамин Зускин</b>, актёр ГОСЕТа, в 1948 г. был арестован по делу Еврейского антифашистского комитета и в 1952 г. расстрелян; реабилитирован посмертно.</li>
+      </ul>
+    </div>
+  </details>
+</section>
+
+<!-- ================= 3. ВОПРОСЫ ================= -->
+<section id="questions">
+  <div class="sec-h"><span class="n">3</span><h2>Вопросы по фильму</h2></div>
+
+  <div class="card" id="reg">
+    <div id="reg-form">
+      <p style="margin:0 0 12px">Чтобы отвечать, введите фамилию, имя и группу. Ответы сохраняются в этом браузере, поэтому можно прерваться и вернуться позже на <b>этом же устройстве</b>.</p>
+      <label class="f" for="fio">Фамилия и имя</label>
+      <input class="inp" id="fio" autocomplete="name" placeholder="Иванов Иван" maxlength="80">
+      <label class="f" for="grp">Группа</label>
+      <input class="inp" id="grp" placeholder="ИСТ-21" maxlength="30" autocapitalize="characters">
+      <p class="err" id="reg-err"></p>
+      <button class="btn btn-lamp" id="start" type="button">Начать работу</button>
+      <p class="note">Ответы нужно писать развёрнуто и своими словами. Уходы со страницы во время работы записываются (на оценку не влияют), но преподаватель их видит.</p>
+    </div>
+    <div class="who" id="who" hidden>
+      <div>Работу выполняет: <span class="name" id="who-name"></span></div>
+      <button class="btn btn-ghost" id="change" type="button">Изменить</button>
+    </div>
+  </div>
+
+  <div id="qlist" class="locked" style="margin-top:18px"></div>
+</section>
+
+<!-- ================= 4. ЭССЕ ================= -->
+<section id="essay" class="essay">
+  <div class="sec-h"><span class="n">4</span><h2>Эссе</h2><span class="t">300–500 слов</span></div>
+  <div id="essay-box" class="q locked">
+    <p class="q-text" style="margin-top:0">Выберите <b>одну</b> тему и напишите связный текст: вступление с тезисом, аргументы, вывод.</p>
+    <div class="topics" id="topics"></div>
+    <p style="margin:0 0 6px;font-size:15px;color:#fff"><b>Критерии оценки</b></p>
+    <ul class="crit">
+      <li>есть чёткий тезис (ваша позиция), а не пересказ фильма;</li>
+      <li>не менее трёх конкретных эпизодов фильма как аргументы;</li>
+      <li>историческая фактура: даты, имена, события 1920 и 1947 гг.;</li>
+      <li>вы различаете, что показано на экране и что было на самом деле;</li>
+      <li>используете понятия из введения (соцреализм, «революционное развитие», культ личности и т. п.);</li>
+      <li>есть вывод; текст написан самостоятельно.</li>
+    </ul>
+    <textarea id="essay-text" data-min="300" data-max="500" placeholder="Текст эссе…" disabled></textarea>
+    <div class="cnt"><span id="essay-hint">Нужно 300–500 слов</span><span><span id="essay-words">0</span> слов</span></div>
+  </div>
+  <div class="sendbox">
+    <button class="btn btn-lamp" id="send" type="button" disabled>Отправить работу преподавателю</button>
+    <div class="sendmsg" id="sendmsg"></div>
+  </div>
+  <div class="result" id="result" hidden></div>
+</section>
+
+</main>
+
+<footer class="wrap">Практикум по истории СССР · фильм «Свет над Россией» (1947) размещён на официальном канале «Мосфильма»</footer>
+
+<div class="bar" id="bar" hidden>
+  <div class="in">
+    <span>Ответы: <b id="bar-done">0</b>/8 · Эссе: <b id="bar-words">0</b> сл. · Уходы: <b id="bar-exits">0</b></span>
+    <a class="btn btn-lamp" href="#essay">К эссе</a>
+  </div>
+</div>
+
+<div class="lb" id="lb" hidden><button type="button" aria-label="Закрыть" id="lb-x">×</button><img id="lb-img" alt=""><p id="lb-cap"></p></div>
+
+<script>
+/* Адрес веб-приложения Google Apps Script (заканчивается на /exec). Пока пусто — демо-режим, ответы никуда не уходят. */
+var SCRIPT_URL = "";
+
+var QUESTIONS = [
+ {id:"q1", title:"Рамка рассказа",
+  text:"Фильм построен как воспоминания матроса Александра Рыбакова — участника Октября, бойца охраны Ленина и фронтовика Великой Отечественной войны. Зачем авторам 1947 года понадобилось смотреть на 1918–1920 годы глазами ветерана недавней войны? Какую связь между электрификацией и Победой выстраивает такая рамка?",
+  hint:"начало и финал фильма; кто рассказчик и к кому он обращается; какие годы «склеены» в одну линию."},
+ {id:"q2", title:"Инженер Забелин",
+  text:"Проследите путь инженера Забелина (Н. Охлопков): каким он показан в начале, что его меняет, к чему он приходит в конце. Какую политику большевиков по отношению к «буржуазным специалистам» иллюстрирует эта линия? Сопоставьте экранную историю с тем, что произошло со старой технической интеллигенцией в конце 1920-х — начале 1930-х гг. (Шахтинское дело, процесс «Промпартии»).",
+  hint:"его разговоры с Лениным и Сталиным, дом и семья Забелиных, слова о «мечтателях»."},
+ {id:"q3", title:"Ленин и Сталин",
+  text:"В пьесе Погодина главный собеседник Забелина — Ленин; в фильме роль Сталина заметно расширена: он обсуждает с Лениным переустройство страны и сам наставляет инженера. Опишите эти сцены. Какую идею о Сталине они внушают зрителю 1947 года? Насколько она соответствует тому, что известно о подготовке плана ГОЭЛРО (комиссия Г. М. Кржижановского)?",
+  hint:"кто кого слушает и кто принимает решения; мизансцены, где вожди в кадре вдвоём; финальная сцена у карты."},
+ {id:"q4", title:"«Россия во мгле»",
+  text:"Как в фильме показана встреча Ленина с английским писателем (Г. Уэллс) и их спор о будущем России? Что на самом деле писал Уэллс в книге «Россия во мгле» (1920) и почему советской пропаганде был так важен взгляд иностранца «со стороны»? Как фильм обыгрывает приглашение «приехать через десять лет» — и с кем Уэллс встретился, когда действительно приехал в 1934 г.?",
+  hint:"как выглядит и говорит писатель, как реагирует Ленин; кто оказывается прав в логике фильма."},
+ {id:"q5", title:"«Лампочка Ильича»",
+  text:"Разберите сцену пуска сельской электростанции, построенной крестьянами (ср. реальный эпизод: Ленин в деревне Кашино, 14 ноября 1920 г.). Какой показана деревня и её отношения с властью? Чего в этой картине 1920 года нет (продразвёрстка, голод, крестьянские восстания)? Почему создатели фильма выбрали такой образ села именно в 1947 г., во время послевоенного голода?",
+  hint:"лица и речи крестьян, свет лампочки, реакция толпы; сравните с «Колхозным праздником» Герасимова из введения."},
+ {id:"q6", title:"Куранты и время",
+  text:"Линия часовщика (В. Зускин) и ремонта кремлёвских курантов перешла в фильм из пьесы «Кремлёвские куранты». Что символизируют замолчавшие и вновь заигравшие часы? Как этот образ связан с названием фильма и темой «света»? Вспомните мысль из введения об «остановленном времени» соцреализма.",
+  hint:"что играют куранты после ремонта; кто и зачем ищет мастера; как часовщик относится к новой власти."},
+ {id:"q7", title:"Язык кино",
+  text:"Какими художественными средствами Юткевич создаёт образ эпохи: кинохроника, массовые сцены, музыка А. Хачатуряна, крупные планы вождей, свет и тьма в кадре? Приведите 2–3 конкретных эпизода и объясните, как форма работает на идею. Где фильм следует канону соцреализма, а где, возможно, выходит за его рамки?",
+  hint:"контраст тёмных и освещённых кадров; монтаж игровых сцен с хроникой; эпизоды с Маяковским и «кафе поэтов»."},
+ {id:"q8", title:"Почему «на полку»?",
+  text:"Фильм был закончен в 1947 г., но в широкий прокат не вышел. Документальных свидетельств о причинах мало, существуют разные версии. Опираясь на контекст 1946–1947 гг. (постановление ЦК о кинофильме «Большая жизнь», ждановские постановления, требования к изображению вождей на экране), сформулируйте две гипотезы. Чётко отделите в ответе факты от предположений.",
+  hint:"что могло не устроить цензуру и самого Сталина; вспомните о «борьбе с формализмом» из введения."}
+];
+
+var TOPICS = [
+ ["A","«Свет над Россией» как исторический источник: что фильм рассказывает о 1920 годе и что — о 1947-м?"],
+ ["B","Цена модернизации за кадром: что фильм об электрификации не показывает и почему?"],
+ ["C","«Кремлёвский мечтатель» и вождь-продолжатель: как кино 1947 года переписывает историю ГОЭЛРО по законам соцреализма"]
+];
+
+(function(){
+  var KEY="svet-nad-rossiey-v1";
+  var $=function(s){return document.querySelector(s)}, $$=function(s){return Array.prototype.slice.call(document.querySelectorAll(s))};
+  var st; try{st=JSON.parse(localStorage.getItem(KEY))}catch(e){}
+  st=st||{fio:"",group:"",started:false,submitted:false,answers:{},topic:"",essay:"",exits:0,log:[],t0:0};
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}}
+  function words(t){var m=String(t||"").trim().match(/[A-Za-zА-Яа-яЁёӘәҒғҚқҢңӨөҰұҮүҺһІі0-9-]+/g);return m?m.length:0}
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+
+  /* --- построение вопросов --- */
+  var ql=$("#qlist");
+  ql.innerHTML=QUESTIONS.map(function(q,i){
+    return '<div class="q" id="box-'+q.id+'"><div class="q-top"><span class="q-num">'+(i+1)+'</span><span class="q-title">'+esc(q.title)+'</span></div>'+
+      '<p class="q-text">'+esc(q.text)+'</p><p class="hint"><b>На что обратить внимание:</b> '+esc(q.hint)+'</p>'+
+      '<textarea data-q="'+q.id+'" placeholder="Ваш развёрнутый ответ (≈ 80–150 слов)…" disabled></textarea>'+
+      '<div class="cnt"><span>Рекомендуется 80–150 слов</span><span><span class="w">0</span> слов</span></div></div>';
+  }).join("");
+  $("#topics").innerHTML=TOPICS.map(function(t){
+    return '<label class="topic"><input type="radio" name="topic" value="'+t[0]+'" disabled><span><b>'+t[0]+'.</b> '+esc(t[1])+'</span></label>';
+  }).join("");
+
+  function fill(){
+    $$("#qlist textarea").forEach(function(ta){ta.value=st.answers[ta.dataset.q]||"";cnt(ta)});
+    $("#essay-text").value=st.essay||""; essayCnt();
+    $$('input[name=topic]').forEach(function(r){r.checked=(r.value===st.topic)});
+  }
+  function cnt(ta){var w=words(ta.value),el=ta.nextElementSibling.querySelector(".w");el.textContent=w;el.parentNode.className=w>=80?"good":""}
+  function essayCnt(){var w=words($("#essay-text").value);$("#essay-words").textContent=w;
+    var h=$("#essay-hint");
+    if(w<300){h.textContent="Нужно ещё "+(300-w)+" сл. (минимум 300)";h.className=""}
+    else if(w<=500){h.textContent="Объём в норме";h.className="good"}
+    else{h.textContent="Больше 500 слов — постарайтесь сократить";h.className=""}
+  }
+  function done(){return QUESTIONS.filter(function(q){return (st.answers[q.id]||"").trim()}).length}
+
+  function setLock(){
+    var on=st.started&&!st.submitted;
+    ["#qlist","#essay-box"].forEach(function(s){$(s).classList.toggle("locked",!st.started)});
+    $$("#qlist textarea, #essay-text, input[name=topic]").forEach(function(el){el.disabled=!on});
+    $("#send").disabled=!on;
+    $("#reg-form").hidden=st.started; $("#who").hidden=!st.started;
+    $("#who-name").textContent=st.fio+", "+st.group;
+    $("#change").hidden=st.submitted;
+    updateBar();
+  }
+  function updateBar(){
+    var show=st.started&&!st.submitted;
+    $("#bar").hidden=!show; document.body.classList.toggle("testing",show);
+    $("#bar-done").textContent=done(); $("#bar-words").textContent=words(st.essay); $("#bar-exits").textContent=st.exits;
+  }
+
+  /* --- регистрация --- */
+  $("#fio").value=st.fio; $("#grp").value=st.group;
+  $("#start").onclick=function(){
+    var f=$("#fio").value.trim().replace(/\s+/g," "), g=$("#grp").value.trim();
+    if(f.split(" ").length<2){$("#reg-err").textContent="Введите фамилию и имя.";$("#fio").focus();return}
+    if(!g){$("#reg-err").textContent="Введите группу.";$("#grp").focus();return}
+    $("#reg-err").textContent="";
+    st.fio=f; st.group=g; st.started=true; if(!st.t0) st.t0=Date.now(); save(); setLock();
+    var first=$("#qlist textarea"); if(first) first.scrollIntoView({behavior:"smooth",block:"center"});
+  };
+  $("#change").onclick=function(){st.started=false;save();setLock();$("#fio").focus()};
+
+  /* --- ввод --- */
+  var tmr;
+  document.addEventListener("input",function(e){
+    var t=e.target; if(st.submitted) return;
+    if(t.dataset&&t.dataset.q){st.answers[t.dataset.q]=t.value;cnt(t);$("#box-"+t.dataset.q).classList.remove("missing")}
+    else if(t.id==="essay-text"){st.essay=t.value;essayCnt();$("#essay-box").classList.remove("missing")}
+    else if(t.name==="topic"){st.topic=t.value;$("#essay-box").classList.remove("missing")}
+    else return;
+    clearTimeout(tmr); tmr=setTimeout(function(){save();updateBar()},300);
+  });
+  document.addEventListener("change",function(e){if(e.target.name==="topic"&&!st.submitted){st.topic=e.target.value;save()}});
+
+  /* --- учёт уходов со страницы (только записывается) --- */
+  var away=false,last=0,vkAt=0,dlg=false;
+  $("#vk-link").addEventListener("click",function(){vkAt=Date.now()});
+  function inFs(){return !!(document.fullscreenElement||document.webkitFullscreenElement)}
+  function exit(reason){
+    if(!st.started||st.submitted) return;
+    var now=Date.now(); if(away||now-last<1500) return;
+    if(reason==="blur"){ var a=document.activeElement; if(inFs()||dlg||(a&&a.tagName==="IFRAME")) return; } // клик по плееру — не уход
+    away=true; last=now;
+    var stamp=new Date().toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit",second:"2-digit"});
+    st.exits++; st.log.push(stamp+(now-vkAt<3000?" (VK Видео)":"")); save(); updateBar();
+  }
+  function back(){if(!document.hidden) away=false}
+  document.addEventListener("visibilitychange",function(){document.hidden?exit("hidden"):back()});
+  window.addEventListener("blur",function(){setTimeout(function(){if(!document.hasFocus()) exit("blur")},150)});
+  window.addEventListener("focus",back);
+  function ask(t){dlg=true;var r=confirm(t);setTimeout(function(){dlg=false},700);return r}
+
+  /* --- отправка --- */
+  function device(){var u=navigator.userAgent;var os=/iPhone|iPad|iPod/.test(u)?"iOS":/Android/.test(u)?"Android":/Windows/.test(u)?"Windows":/Mac/.test(u)?"macOS":"другое";return os+", экран "+screen.width+"×"+screen.height}
+  $("#send").onclick=function(){
+    if(st.submitted) return;
+    $$(".q").forEach(function(el){el.classList.remove("missing")});
+    var miss=QUESTIONS.filter(function(q){return !(st.answers[q.id]||"").trim()});
+    miss.forEach(function(q){$("#box-"+q.id).classList.add("missing")});
+    var ew=words(st.essay), probs=[];
+    if(miss.length) probs.push("без ответа вопросы: "+miss.map(function(q){return QUESTIONS.indexOf(q)+1}).join(", "));
+    if(!st.topic) probs.push("не выбрана тема эссе");
+    if(ew<300) probs.push("в эссе "+ew+" сл. из 300");
+    if(!st.topic||ew<300) $("#essay-box").classList.add("missing");
+    if(probs.length){ if(!ask("Работа не закончена: "+probs.join("; ")+".\n\nВсё равно отправить? Изменить ответы после отправки нельзя.")){
+        var f=document.querySelector(".missing"); if(f) f.scrollIntoView({behavior:"smooth",block:"center"}); return; } }
+    else if(!ask("Отправить работу? Изменить ответы после отправки нельзя.")) return;
+
+    var p={test:"svet-nad-rossiey",fio:st.fio,group:st.group,answers:st.answers,topic:st.topic,
+      topicText:(TOPICS.filter(function(t){return t[0]===st.topic})[0]||["",""])[1],essay:st.essay,essayWords:ew,
+      exits:st.exits,exitLog:st.log.join(", "),duration:Math.round((Date.now()-(st.t0||Date.now()))/60000)+" мин",device:device()};
+    if(!SCRIPT_URL){showRes(true);return}
+    var b=$("#send"),m=$("#sendmsg"); b.disabled=true; m.textContent="Отправляю…";
+    fetch(SCRIPT_URL,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(p)})
+      .then(function(r){return r.json()})
+      .then(function(r){if(!r.ok) throw new Error(r.error||"ошибка скрипта"); st.submitted=true; save(); m.textContent=""; setLock(); showRes(false)})
+      .catch(function(err){b.disabled=false;m.textContent="Не удалось отправить ("+err.message+"). Проверьте интернет и нажмите ещё раз — ответы сохранены."});
+  };
+  function showRes(demo){
+    var r=$("#result"); r.hidden=false;
+    if(demo){r.className="result warn";r.innerHTML="<p><b>Демо-режим.</b> Таблица преподавателя ещё не подключена, ответы никуда не отправлены. Сообщите об этом преподавателю — ваши ответы сохранены в браузере.</p>"}
+    else{r.className="result ok";r.innerHTML="<p><b>Работа отправлена.</b> Спасибо, "+esc(st.fio.split(" ")[1]||st.fio)+"!</p><p>Ответы и эссе проверит преподаватель. Уходов со страницы во время работы: <b>"+st.exits+"</b>.</p>"}
+    r.scrollIntoView({behavior:"smooth",block:"center"});
+  }
+
+  /* --- запрет копирования текста страницы --- */
+  function inField(n){n=n&&n.nodeType===3?n.parentNode:n;return !!(n&&n.closest&&n.closest("input,textarea"))}
+  ["copy","cut"].forEach(function(ev){document.addEventListener(ev,function(e){
+    if(inField(e.target)&&inField(document.activeElement)) return;   // своё поле ответа копировать можно
+    e.preventDefault(); if(e.clipboardData) e.clipboardData.setData("text/plain","");
+  })});
+  document.addEventListener("contextmenu",function(e){if(!inField(e.target)) e.preventDefault()});
+  document.addEventListener("selectstart",function(e){if(!inField(e.target)) e.preventDefault()});
+  document.addEventListener("dragstart",function(e){if(!inField(e.target)) e.preventDefault()});
+  document.addEventListener("keydown",function(e){
+    var k=(e.key||"").toLowerCase();
+    if((e.ctrlKey||e.metaKey)&&(k==="s"||k==="p"||k==="u")) e.preventDefault();          // сохранить, печать, исходный код
+    if((e.ctrlKey||e.metaKey)&&(k==="a"||k==="c")&&!inField(document.activeElement)) e.preventDefault();
+  });
+
+  /* --- картинки: увеличение и запасной вариант, если не загрузились --- */
+  var lb=$("#lb");
+  $$(".lecture figure img").forEach(function(img){
+    img.addEventListener("error",function(){var f=img.closest("figure");img.remove();f.insertAdjacentHTML("afterbegin",'<a href="https://arzamas.academy/materials/1204" target="_blank" rel="noopener" style="display:block;padding:20px;background:#e9dfcb;border-radius:8px;text-align:center;color:#6b2a1c">Изображение открыть на «Арзамасе» ↗</a>')});
+    img.addEventListener("click",function(){$("#lb-img").src=img.src;$("#lb-cap").textContent=img.parentNode.querySelector("figcaption").textContent;lb.hidden=false;document.body.style.overflow="hidden"});
+  });
+  function closeLb(){lb.hidden=true;document.body.style.overflow=""}
+  lb.addEventListener("click",function(e){if(e.target!==$("#lb-img")) closeLb()});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape") closeLb()});
+
+  fill(); setLock();
+  if(st.submitted){$("#result").hidden=false;$("#result").className="result ok";$("#result").innerHTML="<p><b>Работа уже отправлена</b> ("+esc(st.fio)+").</p>"}
+})();
+</script>
+</body>
+</html>
