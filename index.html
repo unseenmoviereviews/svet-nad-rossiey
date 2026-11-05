@@ -402,9 +402,10 @@ footer{font:16px "Neucha",cursive;text-align:center;padding:24px 0 44px}
 
 <div class="lb" id="lb" hidden><button type="button" aria-label="Закрыть" id="lb-x">×</button><img id="lb-img" alt=""><p id="lb-cap"></p></div>
 
+<script src="config.js"></script>
 <script>
-/* Адрес веб-приложения Google Apps Script (заканчивается на /exec). Пока пусто — демо-режим, ответы никуда не уходят. */
-var SCRIPT_URL = "";
+/* Адрес веб-приложения Google Apps Script задаётся в config.js. Пока его нет — демо-режим. */
+var SCRIPT_URL = window.SVET_SCRIPT_URL || "";
 
 var QUESTIONS = [
  {id:"q1", title:"Рамка рассказа",
@@ -550,7 +551,7 @@ var TOPICS = [
 
     var p={test:"svet-nad-rossiey",fio:st.fio,group:st.group,answers:st.answers,topic:st.topic,
       topicText:(TOPICS.filter(function(t){return t[0]===st.topic})[0]||["",""])[1],essay:st.essay,essayWords:ew,
-      exits:st.exits,exitLog:st.log.join(", "),duration:Math.round((Date.now()-(st.t0||Date.now()))/60000)+" мин",device:device()};
+      exits:st.exits,exitLog:st.log.join(", "),pastes:st.pastes||0,duration:Math.round((Date.now()-(st.t0||Date.now()))/60000)+" мин",device:device()};
     if(!SCRIPT_URL){showRes(true);return}
     var b=$("#send"),m=$("#sendmsg"); b.disabled=true; m.textContent="Отправляю…";
     fetch(SCRIPT_URL,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(p)})
@@ -571,6 +572,14 @@ var TOPICS = [
     if(inField(e.target)&&inField(document.activeElement)) return;   // своё поле ответа копировать можно
     e.preventDefault(); if(e.clipboardData) e.clipboardData.setData("text/plain","");
   })});
+  function noPaste(e){
+    if(!inField(e.target)||e.target.id==="fio"||e.target.id==="grp") return;
+    e.preventDefault();
+    if(st.started&&!st.submitted){st.pastes=(st.pastes||0)+1;save()}
+  }
+  document.addEventListener("paste",noPaste,true);
+  document.addEventListener("drop",noPaste,true);
+  document.addEventListener("beforeinput",function(e){if(/^insertFrom(Paste|Drop|PasteAsQuotation)/.test(e.inputType||"")) noPaste(e)},true);
   document.addEventListener("contextmenu",function(e){if(!inField(e.target)) e.preventDefault()});
   document.addEventListener("selectstart",function(e){if(!inField(e.target)) e.preventDefault()});
   document.addEventListener("dragstart",function(e){if(!inField(e.target)) e.preventDefault()});
